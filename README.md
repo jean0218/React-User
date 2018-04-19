@@ -25,15 +25,15 @@
 # Catalog
     ├── .babelrc 
     ├── README.md
-    ├── __mocks__ // Some resources that require mock 一些需要mock的资源
+    ├── __mocks__ // 一些需要mock的资源Some resources that require mock 
     ├── package.json 
     ├── build // 编译文件配置Compiling file configuration
     │   ├── webpack.base.config.js //webpack base config
     │   ├── webpack.config.js // webpack本地调试配置local debug configuration 
     │   ├── webpack.dev.config.js //webpack测试环境配置,提取了css,可调试Webpack test environment configuration, extract CSS, debug
     │   └── webpack.pro.config.js //压缩资源，不可调试Compress resources, not debug  
-    └── src // 源文件
-        ├── base // 脱离业务的组件
-        ├── template //html模板文件
-        ├── views //业务组件
-        └── index.js //app入口
+    └── src 
+        ├── base // 脱离业务的组件Components out of business
+        ├── template //html模板文件HTML template
+        ├── views //业务组件Business components
+        └── index.js //app入口 App entrance

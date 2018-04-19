@@ -8,7 +8,6 @@ const outputDir = 'app';
 
 const webpackConfig = merge(webpackBaseConfig, {
     devtool: 'cheap-source-map',
-    //文件输出配置
     output: {
         path: path.resolve(__dirname, '../' + outputDir + '/'),
         filename: 'js/[name].js',

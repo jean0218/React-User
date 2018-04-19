@@ -6,7 +6,6 @@ const outputDir = 'production';
 
 
 const webpackConfig = merge(webpackBaseConfig, {
-    //文件输出配置
     output: {
         path: path.resolve(__dirname, '../' + outputDir + '/'),
         filename: 'js/[name].js',
