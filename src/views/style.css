@@ -1,0 +1,83 @@
+html,body {
+    font: 14px/1.2 Helvetica Neue, Helvetica, Arial, sans-serif,tahoma;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,*:after,*:before{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content{
+    padding-top: 80px;
+}
+
+.btn{
+    padding: 4px 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+}
+
+.panel{
+  padding: 20px;
+  margin: 20px 10px;
+  border: 1px solid #000;
+}
+
+.input{
+  border: 1px solid #000;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 6px;
+}
+
+.user-form__line,
+.user-info__line {
+  margin: 0 0 10px;
+}
+
+.user-info__label,
+.user-form__label{
+  width: 80px;
+  display: inline-block;
+  line-height: 40px;
+}
+
+.user-form__msg{
+    color: #f00;
+}
+
+.user-form__radio-group,
+.user-info__radio-group,
+.user-info__line__p {
+  display: inline-block;
+}
+
+.user-info__line__p {
+  font-weight: 600;
+}
+
+.user-info__operation-group,
+.user-form__operation-group{
+  text-align: right;
+}
+.user-info__button,
+.user-form__button{
+  margin-right: 10px;
+}
