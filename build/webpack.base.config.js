@@ -13,7 +13,7 @@ var webpackBaseConfig = {
     },
 
     entry: {
-        user:path.resolve(__dirname, '../src/index.js'),
+        user:path.resolve(__dirname, '../src/views/index.js'),
     },
     
     module: {

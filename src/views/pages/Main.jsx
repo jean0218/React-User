@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./style.css";
-import Header from "./components/Header.jsx";
-import UserInfoPanel from "./components/UserInfoPanel.jsx";
-import AddUserPanel from "./components/AddUserPanel.jsx";
-import getArrIndex from "./untils/getArrIndex";
-import arrayIsEquality from "./untils/arrayIsEquality";
+import "./main.css";
+import Header from "../components/Header.jsx";
+import UserInfoPanel from "../components/UserInfoPanel.jsx";
+import AddUserPanel from "../components/AddUserPanel.jsx";
+import getArrIndex from "../utils/getArrIndex";
+import arrayIsEquality from "../utils/arrayIsEquality";
 
 export default class PageRoot extends Component {
     constructor(props) {
@@ -50,20 +50,6 @@ export default class PageRoot extends Component {
         });
     }
 
-    renderUserInfoPanel() {
-        const { userInfoArray } = this.state;
-        if (userInfoArray.length === 0) {
-            return null;
-        }
-        return (
-            <UserInfoPanel
-                list = {userInfoArray}
-                onChange = {this.handleChangeUser}
-                onDel = {this.handleDelUser}
-            />
-        );
-    }
-
     handleAddUser(newState) {
         let userInfoArray = [... this.state.userInfoArray];
         const len = userInfoArray.length;
@@ -99,6 +85,26 @@ export default class PageRoot extends Component {
         });
     }
 
+    handleAddUserInfo() {
+        this.setState({
+            userPanelVisible: true
+        });
+    }
+    
+    renderUserInfoPanel() {
+        const { userInfoArray } = this.state;
+        if (userInfoArray.length === 0) {
+            return null;
+        }
+        return (
+            <UserInfoPanel
+                list = {userInfoArray}
+                onChange = {this.handleChangeUser}
+                onDel = {this.handleDelUser}
+            />
+        );
+    }
+
     renderAddUserPanel() {
         const { userPanelVisible } = this.state;
         if (!userPanelVisible) {
@@ -112,12 +118,6 @@ export default class PageRoot extends Component {
         );
     }
 
-    handleAddUserInfo() {
-        this.setState({
-            userPanelVisible: true
-        });
-    }
-    
     render() {
         const { isExist } = this.state;
         return (
